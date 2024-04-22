@@ -1,27 +1,27 @@
-const navMenu = document.getElementById('nav-menu'),
-      navToggle = document.getElementById('nav-toggle'),
-      navClose = document.getElementById('nav-close')
+let menuIcon = document.querySelector('#menu-icon');
+let navBar = document.querySelector('.navbar');
 
-/* Menu show */
-if(navToggle){
-    navToggle.addEventListener('click', () =>{
-        navMenu.classList.add('show-menu')
+let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav ul li a');
+
+
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+
+        if(top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
+                links.classList.remove('active');
+                document.querySelector('header nav ul li a [href*=' + id + ']').classList.add(active)
+            })
+        }
     })
 }
 
-/* Menu hidden */
-if(navClose){
-    navClose.addEventListener('click', () =>{
-        navMenu.classList.remove('show-menu')
-    })
+menuIcon.onclick = () => {
+    menuIcon.classList.toggle('bx-x');
+    navBar.classList.toggle('active')
 }
-
-/*=============== REMOVE MENU MOBILE ===============*/
-const navLink = document.querySelectorAll('.nav_link')
-
-const linkAction = () =>{
-    const navMenu = document.getElementById('nav-menu')
-    // When we click on each nav__link, we remove the show-menu class
-    navMenu.classList.remove('show-menu')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
