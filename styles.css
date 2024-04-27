@@ -159,7 +159,7 @@ span {
 
 
 
-@media screen and (max-width:1031px) {
+@media screen and (max-width:1030px) {
 
   header {
     padding: 2rem 3%;
@@ -250,5 +250,18 @@ span {
 
 }
 
+@media screen and (max-width: 1031px){
 
+  .skills_info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills_container {
+
+    grid-template-columns: 1fr;
+    
+  }
+  
+  
+}
 
