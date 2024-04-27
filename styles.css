@@ -1,0 +1,254 @@
+
+@import url(/assets/css/reset.css);
+@import url(/assets/css/header.css);
+@import url(/assets/css/home.css);
+@import url(/assets/css/skills.css);
+@import url(/assets/css/projects.css);
+@import url(/assets/css/education.css);
+@import url(/assets/css/hobbies.css);
+@import url(/assets/css/contact.css);
+@import url(/assets/css/footer.css);
+
+
+
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*===== VARIABLES CSS =====*/
+:root {
+
+  --bg-color: #080808;
+  --second-bg-color: #131313;
+  --text-color: #ffffff;
+  --main-color: #4198ad;
+}
+
+/*===== BASE =====*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 70%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+section {
+  min-height: 100vh;
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--main-color);
+  width: 85%;
+  margin: 0 auto;
+  
+}
+
+span {
+  color: var(--main-color);
+}
+
+.heading {
+  font-size: 7rem;
+  text-align: center;
+  margin: 5rem 0;
+  letter-spacing: 2px;
+  color: var(--main-color);
+}
+
+
+
+
+
+
+
+
+
+
+/*=========== SCROLL BAR ==========*/
+
+::-webkit-scrollbar {
+  width: 0.8rem;
+  
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(207, 4%, 65%);
+ 
+}
+
+
+/* =================Responsive Design Section====================== */
+
+@media screen and (max-width: 600px) {
+
+  .heading {
+    font-size: 5rem;
+  }
+
+  .heading span {
+    font-size: 5rem;
+  }
+
+  .container {
+    margin-inline: 1rem;
+  }
+
+  .skills_info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills_container {
+
+    grid-template-columns: 1fr;
+    
+  }
+
+  .education .timeline {
+    margin-top: 2rem;
+  }
+
+  .education .timeline::after {
+    left: 31px;
+  }
+
+  .education .timeline-container {
+    width: 100%;
+    padding-left: 8rem;
+    padding-right: 2rem;
+  }
+
+  .education .timeline-container::after {
+    font-size: 2.2rem;
+  }
+
+  .education .timeline-container::before {
+    left: 61px;
+    border: medium solid var(--main-color);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--main-color) transparent transparent;
+  }
+
+  .education .left::after {
+    left: 15px;
+  }
+
+  .education .right::after {
+    left: 15px;
+  }
+
+  .education .right {
+    left: 0%;
+  }
+
+  
+  .footer {
+    padding: 2rem 3%;
+  }
+}
+
+
+
+@media screen and (max-width:1031px) {
+
+  header {
+    padding: 2rem 3%;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 40%;
+    padding: 1rem 3%;
+    border-bottom-left-radius: 2rem;
+    border-left: 3px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    display: none;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+
+  }
+
+  .navbar.active {
+    display: block;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+
+  .navbar a:hover,
+  .navbar.active {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-bottom: 0.5rem solid var(--main-color);
+  }
+
+  .home {
+    flex-direction: column;
+    margin: 5rem 4rem;
+  }
+
+  .home-content h3 {
+    font-size: 2.5rem;
+  }
+
+  .home-content h1 {
+    font-size: 6rem;
+
+  }
+
+
+  .home-img img {
+    width: 70vw;
+    margin-top: 4rem;
+  }
+
+  .hobbies .container {
+    margin: 0;
+    padding: 0;
+  }
+
+  .hobbies .container .row {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1rem;
+    padding: 2rem 0.2rem 2rem 0.2rem;
+    gap: 1rem;
+  }
+
+  .hobbies .container {
+    margin-top: 5px;
+    width: 100%;
+  }
+
+  
+  .projects-content {
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    gap: 4rem;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+}
+
+
+
